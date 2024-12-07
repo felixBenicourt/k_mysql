@@ -11,8 +11,6 @@ This project provides a Python wrapper for managing a relational database with t
 - [Features](#features)
 - [Setup](#setup)
 - [Usage](#usage)
-- [Examples](#examples)
-- [Contributing](#contributing)
 - [License](#license)
 
 ---
