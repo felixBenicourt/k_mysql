@@ -10,7 +10,6 @@ This project provides a Python wrapper for managing a relational database with t
 - [Database Structure](#database-structure)
 - [Features](#features)
 - [Setup](#setup)
-- [Usage](#usage)
 - [License](#license)
 
 ---
