@@ -1,5 +1,4 @@
 
-
 # Database Wrapper Documentation
 
 This project provides a Python wrapper for managing a relational database with the following tables: `project`, `sequence`, `shot`, and `asset`. The wrapper is designed to simplify database interactions by abstracting SQL commands into high-level Python operations.
@@ -79,3 +78,23 @@ The database consists of the following tables:
 2. Install the required Python libraries:
    ```bash
    pip install mysql-connector-python
+3. use rez to create your custom management package with the alias.
+    ```python
+    name = "my_package"
+    version = "1.0.1"
+    author = "felix benicourt"
+
+    description = ""
+
+    build_command = False
+    requires = ['python-3.10']
+
+    def commands():
+        env.PYTHONPATH.append(this.root)
+        env.PYTHONPATH.append("{root}\my_package")
+        env.PATH.append(this.root)
+        env.PATH.append("{root}\my_package")
+        alias("my_file", "python {root}/my_package/my_file.py")
+
+   ```bash
+   rez env my_package -- my_file
