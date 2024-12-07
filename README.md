@@ -78,7 +78,7 @@ The database consists of the following tables:
 2. Install the required Python libraries:
    ```bash
    pip install mysql-connector-python
-3. use rez to create your custom management package with the alias.
+3. Use rez to create your custom management package with the alias.
     ```python
     name = "my_package"
     version = "1.0.0"
@@ -95,6 +95,6 @@ The database consists of the following tables:
         env.PATH.append(this.root)
         env.PATH.append("{root}\my_package")
         alias("my_file", "python {root}/my_package/my_file.py")
-4. execute your rez command
+4. Execute your rez command
     ```bash
     rez env my_package -- my_file
