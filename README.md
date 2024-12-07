@@ -81,13 +81,13 @@ The database consists of the following tables:
 3. use rez to create your custom management package with the alias.
     ```python
     name = "my_package"
-    version = "1.0.1"
-    author = "felix benicourt"
+    version = "1.0.0"
+    author = "fyour name"
 
     description = ""
 
     build_command = False
-    requires = ['python-3.10']
+    requires = []
 
     def commands():
         env.PYTHONPATH.append(this.root)
