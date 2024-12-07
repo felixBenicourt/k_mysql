@@ -99,60 +99,60 @@ The database consists of the following tables:
 
 
 ## Usage
-    ```python
-    from k_mysql.mysql_wrapper import MySQLDatabase
+ ```python
+ from k_mysql.mysql_wrapper import MySQLDatabase
 
 
-    db_class = MySQLDatabase("localhost", "root", "", "home_db")
+ db_class = MySQLDatabase("localhost", "root", "", "home_db")
 
-    db_class.setup_all_tables()
+ db_class.setup_all_tables()
 
-    db_class.insert_element(
-        "project",
-        {"name":"template"}
-    )
+ db_class.insert_element(
+     "project",
+     {"name":"template"}
+ )
 
-    db_class.insert_element(
-        "sequence",
-        {"projectId":1,"name":"00003"}
-    )
+ db_class.insert_element(
+     "sequence",
+     {"projectId":1,"name":"00003"}
+ )
 
-    db_class.insert_element(
-        "asset",
-        {"projectId":1,
-        "name":"rocketGirl", 
-        "type":"chr",
-        "task":"mdl",
-        "variation":"main",
-        "version":1,
-        "status":"Approved"}
-    )
+ db_class.insert_element(
+     "asset",
+     {"projectId":1,
+     "name":"rocketGirl", 
+     "type":"chr",
+     "task":"mdl",
+     "variation":"main",
+     "version":1,
+     "status":"Approved"}
+ )
 
-    db_class.insert_element(
-        "shot",
-        {"projectId":1,
-        "name":"00000",
-        "type":"shot",
-        "task":"ani",
-        "variation":"main",
-        "sequenceId":0,
-        "version":1}
-    )
+ db_class.insert_element(
+     "shot",
+     {"projectId":1,
+     "name":"00000",
+     "type":"shot",
+     "task":"ani",
+     "variation":"main",
+     "sequenceId":0,
+     "version":1}
+ )
 
-    assetsRktGrl = db_class.get_elements_by_name(
-        table_name = "asset",
-        name_column = "name",
-        name_value = "rocketGirl"
-    )
+ assetsRktGrl = db_class.get_elements_by_name(
+     table_name = "asset",
+     name_column = "name",
+     name_value = "rocketGirl"
+ )
 
 
-    filtered = db_class.filter_dicts(assetsRktGrl,"task","rig")
-    latest = db_class.get_highest_value(filtered, "version")
+ filtered = db_class.filter_dicts(assetsRktGrl,"task","rig")
+ latest = db_class.get_highest_value(filtered, "version")
 
-    print(latest)
+ print(latest)
 
-    db_class.disconnect()
-    ```
+ db_class.disconnect()
+ ```
 
 ## License
 **MIT License**:
