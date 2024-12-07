@@ -95,6 +95,6 @@ The database consists of the following tables:
         env.PATH.append(this.root)
         env.PATH.append("{root}\my_package")
         alias("my_file", "python {root}/my_package/my_file.py")
-
-   ```bash
-   rez env my_package -- my_file
+4. execute your rez command
+    ```bash
+    rez env my_package -- my_file
