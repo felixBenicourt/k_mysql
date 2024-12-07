@@ -90,8 +90,6 @@ The database consists of the following tables:
     requires = []
 
     def commands():
-        env.PYTHONPATH.append(this.root)
-        env.PYTHONPATH.append("{root}\my_package")
         env.PATH.append(this.root)
         env.PATH.append("{root}\my_package")
         alias("my_file", "python {root}/my_package/my_file.py")
