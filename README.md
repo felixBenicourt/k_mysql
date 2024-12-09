@@ -102,8 +102,8 @@ The database consists of the following tables:
  ```python
  from k_mysql.mysql_wrapper import MySQLDatabase
 
-
- db_class = MySQLDatabase("localhost", "root", "", "home_db")
+"""Using Xamp to emulate a server so I don't need a password"""
+ db_class = MySQLDatabase("localhost", "root", "password", "db_name")
 
  db_class.setup_all_tables()
 
